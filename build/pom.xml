@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>teamcity-echo-plugin</artifactId>
-    <groupId>jetbrains.teamcity</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
   <artifactId>build</artifactId>
   <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.jamel.teamcity.plugin</groupId>
+    <artifactId>teamcity-ding-plugin</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  
   <properties>
       <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-      <teamcity.teamcity-echo-plugin.plugin.version>snapshot-${maven.build.timestamp}</teamcity.teamcity-echo-plugin.plugin.version>
-      <teamcity.teamcity-echo-plugin.plugin.vendorName>Plugin vendor name</teamcity.teamcity-echo-plugin.plugin.vendorName>
-      <teamcity.teamcity-echo-plugin.plugin.vendorUrl>Plugin vendor URL</teamcity.teamcity-echo-plugin.plugin.vendorUrl>
+      <teamcity.teamcity-ding-plugin.plugin.version>snapshot-${maven.build.timestamp}</teamcity.teamcity-ding-plugin.plugin.version>
+      <teamcity.teamcity-ding-plugin.plugin.vendorName>Plugin vendor name</teamcity.teamcity-ding-plugin.plugin.vendorName>
+      <teamcity.teamcity-ding-plugin.plugin.vendorUrl>Plugin vendor URL</teamcity.teamcity-ding-plugin.plugin.vendorUrl>
   </properties>
   <dependencies>
       <dependency>
-           <groupId>jetbrains.teamcity</groupId>
-           <artifactId>teamcity-echo-plugin-agent</artifactId>
-           <version>1.0-SNAPSHOT</version>
+           <groupId>com.jamel.teamcity.plugin</groupId>
+           <artifactId>teamcity-ding-plugin-agent</artifactId>
+           <version>${project.version}</version>
       </dependency>
       <dependency>
-           <groupId>jetbrains.teamcity</groupId>
-           <artifactId>teamcity-echo-plugin-common</artifactId>
-           <version>1.0-SNAPSHOT</version>
+           <groupId>com.jamel.teamcity.plugin</groupId>
+           <artifactId>teamcity-ding-plugin-common</artifactId>
+           <version>${project.version}</version>
       </dependency>
       <dependency>
-           <groupId>jetbrains.teamcity</groupId>
-           <artifactId>teamcity-echo-plugin-server</artifactId>
-           <version>1.0-SNAPSHOT</version>
+           <groupId>com.jamel.teamcity.plugin</groupId>
+           <artifactId>teamcity-ding-plugin-server</artifactId>
+           <version>${project.version}</version>
       </dependency>
   </dependencies>
   <build>
@@ -51,15 +53,15 @@
                 <replacements>
                     <replacement>
                         <token>@Version@</token>
-                        <value>${teamcity.teamcity-echo-plugin.plugin.version}</value>
+                        <value>${teamcity.teamcity-ding-plugin.plugin.version}</value>
                     </replacement>
                     <replacement>
                         <token>@VendorName@</token>
-                        <value>${teamcity.teamcity-echo-plugin.plugin.vendorName}</value>
+                        <value>${teamcity.teamcity-ding-plugin.plugin.vendorName}</value>
                     </replacement>
                     <replacement>
                         <token>@VendorURL@</token>
-                        <value>${teamcity.teamcity-echo-plugin.plugin.vendorUrl}</value>
+                        <value>${teamcity.teamcity-ding-plugin.plugin.vendorUrl}</value>
                     </replacement>
                 </replacements>                        
             </configuration>
@@ -89,7 +91,7 @@
                   <goal>single</goal>
                 </goals>
                 <configuration>
-                  <finalName>teamcity-echo-plugin</finalName>
+                  <finalName>teamcity-ding-plugin</finalName>
                   <outputDirectory>${project.parent.build.directory}</outputDirectory>
                   <appendAssemblyId>false</appendAssemblyId>
                   <descriptors>

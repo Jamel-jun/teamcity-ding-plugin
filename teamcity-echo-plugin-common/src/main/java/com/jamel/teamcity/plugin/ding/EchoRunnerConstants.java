@@ -1,4 +1,4 @@
-package jetbrains.teamcity;
+package com.jamel.teamcity.plugin.ding;
 
 public interface EchoRunnerConstants {
 

@@ -1,4 +1,4 @@
-package jetbrains.teamcity.web;
+package com.jamel.teamcity.plugin.ding.web;
 
 import com.intellij.openapi.util.io.StreamUtil;
 import jetbrains.buildServer.serverSide.BuildsManager;

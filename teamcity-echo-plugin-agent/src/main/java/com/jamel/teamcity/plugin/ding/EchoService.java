@@ -1,5 +1,6 @@
-package jetbrains.teamcity;
+package com.jamel.teamcity.plugin.ding;
 
+import com.jamel.teamcity.plugin.ding.EchoRunnerConstants;
 import jetbrains.buildServer.RunBuildException;
 import jetbrains.buildServer.agent.runner.BuildServiceAdapter;
 import jetbrains.buildServer.agent.runner.ProgramCommandLine;

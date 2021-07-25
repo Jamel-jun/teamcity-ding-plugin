@@ -1,4 +1,4 @@
-package jetbrains.teamcity;
+package com.jamel.teamcity.plugin.ding;
 
 import jetbrains.buildServer.serverSide.InvalidProperty;
 import jetbrains.buildServer.serverSide.PropertiesProcessor;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static jetbrains.teamcity.EchoRunnerConstants.MESSAGE_KEY;
+import static com.jamel.teamcity.plugin.ding.EchoRunnerConstants.MESSAGE_KEY;
 
 public class EchoRunner extends RunType {
 

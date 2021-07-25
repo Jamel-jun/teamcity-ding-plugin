@@ -1,4 +1,4 @@
-package jetbrains.teamcity;
+package com.jamel.teamcity.plugin.ding;
 
 import jetbrains.buildServer.agent.AgentBuildRunnerInfo;
 import jetbrains.buildServer.agent.BuildAgentConfiguration;

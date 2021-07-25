@@ -1,4 +1,4 @@
-<%@ page import="jetbrains.teamcity.EchoRunnerConstants" %>
+<%@ page import="com.jamel.teamcity.plugin.ding.EchoRunnerConstants" %>
 <%@ taglib prefix="props" tagdir="/WEB-INF/tags/props" %>
 <%@ taglib prefix="l" tagdir="/WEB-INF/tags/layout" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
